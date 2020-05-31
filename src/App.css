@@ -1,0 +1,124 @@
+:root {
+  --bg-color: #EFFCEF;
+  --bg-color-hover: #D9A966;
+  --bar-color-1: #CCEDD2;
+  --bar-color-2: #94D3AC;
+  --font-color: #655C56;
+  --border-color: #808000;
+  --page-margin: 1em;
+  --bar-margin: .5em;
+  --header-size: 2em;
+  --font-size-1: 1em;
+  }
+.Container {
+  color: var(--font-color);
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--bg-color);
+  display: grid;
+  grid-template-rows: 1fr 1fr 4fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100vh;
+}
+
+.Header {
+  font-weight: bolder;
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header-content {
+  text-align: center;
+  font-size: 20px;
+}
+
+.BarChart {
+  grid-row: 3;
+  grid-column: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--page-margin);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.Subheader {
+  grid-row: 2;
+  grid-column: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.CountryStats-header,
+.GlobalStats-header,
+.CountryStats-content,
+.GlobalStats-content,
+.CountryStats-content-data,
+.GlobalStats-content-data {
+  margin: 0;
+}
+
+.CountryStats-header,
+.GlobalStats-header,
+.Selector-label {
+  font-size: 18px;
+}
+
+.CountryStats-content,
+.GlobalStats-content,
+.Selector-label {
+  font-weight: bold;
+}
+
+.CountryStats-content-data,
+.GlobalStats-content-data {
+  font-weight: normal;
+}
+
+
+.BarChart-bar {
+  transition: 0.5s;
+  max-height: 100%;
+  min-height: 3%;
+  padding: 5px;
+  margin-bottom: 1px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.BarChart-bar-remove {
+  margin-left: 15px;
+}
+
+.BarChart-bar-title {
+  font-weight: bold;
+}
+
+.BarChart-bar:nth-child(even) {
+  background-color: var(--bar-color-1);
+}
+
+.BarChart-bar:nth-child(odd) {
+  background-color: var(--bar-color-2);
+}
+
+.BarChart-bar:hover,
+.BarChart-bar:active,
+.BarChart-bar:focus {
+  background-color: var(--bg-color-hover);
+}
+
+.BarChart-button {
+  display: flex;
+  height: max-content;
+  background: transparent;
+  border: 0;
+}
+
+.BarChart-title {
+  height: 100%;
+  width: 100%;
+}
